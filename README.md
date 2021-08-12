@@ -15,8 +15,11 @@ To access docker file system
 
 # Docker Compose
 
-To build with docker compose
-`docker-compose up --build`
-
 To run docker compose
-`docker-compose up`
+`docker-compose up` in detached mode `docker-compose up -d`
+
+To stop
+`docker-compose down`
+
+To re-build with docker compose
+`docker-compose up --build`
