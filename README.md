@@ -8,4 +8,4 @@ Reference for how to configure docker
 or
 `docker build -t mpilopillz/simpleweb .` to run tagged
 
-then `docker run mpilopillz/simpleweb`
+then `docker run -p 8080:8080 mpilopillz/simpleweb`
