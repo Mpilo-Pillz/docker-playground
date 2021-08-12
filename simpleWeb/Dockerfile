@@ -1,6 +1,11 @@
 # Specify a base image
-FROM alpine
+FROM node:alpine
 
+# Specify the work directory
+WORKDIR /usr/app
+
+# Copy into container
+COPY ./ ./
 # Install some dependencies
 RUN npm install
 
