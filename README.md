@@ -33,3 +33,7 @@ TO see the runng process
 - always
 - on-failure
 - unless-stopped
+
+# Running custom docker file
+
+`docker build -f Dockerfile.dev .`
