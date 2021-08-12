@@ -23,3 +23,13 @@ To stop
 
 To re-build with docker compose
 `docker-compose up --build`
+
+TO see the runng process
+`docker-compose ps`
+
+\*\* Restart Policies
+
+- no - 'no' in quotes cos yaml treats no as false
+- always
+- on-failure
+- unless-stopped
