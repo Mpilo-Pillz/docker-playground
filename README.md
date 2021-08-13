@@ -37,3 +37,7 @@ TO see the runng process
 # Running custom docker file
 
 `docker build -f Dockerfile.dev .`
+
+# Running with volumes
+
+`docker run -p 3000:3000 -v $(pwd):/app <imgID>`
