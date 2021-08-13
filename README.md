@@ -41,3 +41,9 @@ TO see the runng process
 # Running with volumes
 
 `docker run -p 3000:3000 -v $(pwd):/app <imgID>`
+the correct way
+`docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app sha256:36789d01c0cf2eddcf35417e2f7a8b82f1447ba8bff26a6cfeb3724cd0b7dde`
+
+# Running test in interactive mode
+
+`docker run -it <imgID> npm run test`
