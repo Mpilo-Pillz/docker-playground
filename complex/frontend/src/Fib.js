@@ -68,3 +68,5 @@ class Fib extends Component {
     );
   }
 }
+
+export default Fib;
