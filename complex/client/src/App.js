@@ -3,22 +3,13 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import OtherPage from "./OtherPage";
 import Fib from "./Fib";
+import UsingRef from "./components/UsingRef";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <UsingRef />
         <div>
           <Route exact path="/" component={Fib} />
           <Route exact path="/otherpage" component={OtherPage} />

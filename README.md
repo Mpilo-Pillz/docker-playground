@@ -27,6 +27,8 @@ To re-build with docker compose
 TO see the runng process
 `docker-compose ps`
 
+to trigger build `docker-compose up --build`
+
 \*\* Restart Policies
 
 - no - 'no' in quotes cos yaml treats no as false
