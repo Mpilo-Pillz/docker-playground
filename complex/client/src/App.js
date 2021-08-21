@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import OtherPage from "./OtherPage";
 import Fib from "./Fib";
 import UsingRef from "./components/UsingRef";
+import UsingRefForHTML from "./components/UsingRefForHTML";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Link to="/otherpage">OtherPage</Link>
         </div>
       </div>
+      <UsingRefForHTML />
     </Router>
   );
 }
