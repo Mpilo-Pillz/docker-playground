@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 export default function UsingRefForHTML() {
   const [name, setName] = useState("");
-  const inputRef = useRef();
+  const inputRef = useRef(null);
   const prevName = useRef("");
 
   useEffect(() => {
