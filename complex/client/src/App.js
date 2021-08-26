@@ -5,6 +5,7 @@ import OtherPage from "./OtherPage";
 import Fib from "./Fib";
 import UsingRef from "./components/UsingRef";
 import UsingRefForHTML from "./components/UsingRefForHTML";
+import UseStatePage from "./components/UseStatePage";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
         <div>
           <Route exact path="/" component={Fib} />
           <Route exact path="/otherpage" component={OtherPage} />
+          <Route exact path="/usestate" component={UseStatePage} />
           <Link to="/">Home</Link>
           <Link to="/otherpage">OtherPage</Link>
+          <Link to="/usestate">UseState</Link>
         </div>
       </div>
       <UsingRefForHTML />
