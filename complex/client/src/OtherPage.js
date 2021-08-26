@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import UsingRefForHTML from "./components/UsingRefForHTML";
 
 const OtherPage = () => {
   return (
     <div>
-      O am a page
+      <UsingRefForHTML />
       <Link to="/">Go back home</Link>
     </div>
   );

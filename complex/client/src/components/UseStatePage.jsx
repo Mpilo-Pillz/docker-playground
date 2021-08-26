@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function countInitial() {
   console.log("initCOuntRan");
@@ -11,6 +11,11 @@ function reRenders() {
 const UseStatePage = () => {
   const [count, setCount] = useState(reRenders());
   const [altCount, setAltCount] = useState(() => countInitial());
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
 
   function decrementCount() {
     setCount((prevCount) => prevCount - 1);
@@ -26,8 +31,16 @@ const UseStatePage = () => {
   function divideCount() {
     setAltCount((prevCount) => prevCount / 2);
   }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
+      <h1>Window Width: {windowWidth}</h1>
       <button onClick={decrementCount}>-</button>
       <span>{count}</span>
       <button onClick={incrementCount}>+</button>
