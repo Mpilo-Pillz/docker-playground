@@ -10,10 +10,28 @@ import UseMemoPage from "./components/UseMemoPage";
 import UseCallBackPage from "./components/UseCallBackPage";
 import FunctionalContextComponent from "./components/FunctionContextComponent";
 import ClassContextComponent from "./components/ClassContextComponent";
-import { createContext, useState } from "react";
+import { createContext, useState,  useLayoutEffect, } from "react";
 import UseReducerPage from "./components/UseReducerPage";
 import UseReducerPageComplex from "./components/UseReducerPageComplex";
 import ToDoPage from "./components/todo/ToDoPage";
+
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+function ShowWindowDimensions(props) {
+  const [width, height] = useWindowSize();
+  return <span>Window size: {width} x {height}</span>;
+}
 
 export const ThemeContext = createContext();
 function App() {
@@ -55,6 +73,7 @@ function App() {
             <Link to="/useCallback">Use call back</Link> |
           </div>
         </div>
+        <ShowWindowDimensions />
       </Router>
     </ThemeContext.Provider>
   );
